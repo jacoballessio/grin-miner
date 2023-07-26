@@ -165,7 +165,7 @@ impl CuckooMiner {
 					for i in 0..solver.solutions.num_sols {
 						filtered_sols.push(solver.solutions.sols[i as usize]);
 					}
-					let mut filtered_sols: Vec<Solution> = filtered_sols
+					let filtered_sols: Vec = filtered_sols
 						.iter()
 						.filter(|s| {
 							let proof = Proof {
