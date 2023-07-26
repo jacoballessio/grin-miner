@@ -176,10 +176,7 @@ impl CuckooMiner {
 						})
 						.cloned()
 						.collect();
-					for mut ss in filtered_sols.iter_mut() {
-						ss.nonce = nonce;
-						ss.id = job_id as u64;
-					}
+
 					solver.solutions.num_sols = filtered_sols.len() as u32;
 					for (i, _) in filtered_sols
 						.iter()
